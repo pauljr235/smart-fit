@@ -21,6 +21,7 @@ export const Card = styled.div<Props>`
   text-align: left;
   line-height: 24px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
 `
 
 export const Badge = styled.div`
@@ -33,7 +34,7 @@ export const Badge = styled.div`
   margin-bottom: 12px;
   position: absolute;
   width: 171px;
-  top: 1065px;
+  top: -10px;
 `
 
 export const Title = styled.h2`
