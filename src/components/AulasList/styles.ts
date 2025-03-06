@@ -10,9 +10,9 @@ export const Lista = styled.ul`
 `
 export const TituloSecao = styled.h2`
   text-align: center;
-  font-size: 40px;
-  margin-top: 100px;
-  padding-bottom: 100px;
+  font-size: 32px;
+  margin-top: 50px;
+  padding-bottom: 50px;
   span {
     color: ${cores.yellow};
   }

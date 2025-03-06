@@ -5,6 +5,7 @@ export const FooterContainer = styled.div`
   border-bottom: 4px solid white;
   text-align: center;
   padding-top: 32px;
+  padding-bottom: 32px;
 `
 
 export const Descricao = styled.div`

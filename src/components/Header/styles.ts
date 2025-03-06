@@ -6,10 +6,8 @@ export const HeaderContainer = styled.div`
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
-  justify-content: space-between;
   padding: 20px 60px 10px;
   align-items: center;
-  box-shadow: 4px 10px rgba(0, 0, 0, 0.2);
 `
 
 export const Logo = styled.div`

@@ -11,11 +11,9 @@ const AulasList = () => (
     </TituloSecao>
     <Lista className="container">
       <Aula
-        image={fitDance}
+        image={bodyCombat}
         title="Fitdance"
-        description="
-      Pra você manjar de todos os passinhos, as aulas de dança da Smart Fit são ministradas por professores licenciados pela FitDance.
-    "
+        description="Pra você manjar de todos os passinhos, as aulas de dança da Smart Fit são ministradas por professores licenciados pela FitDance."
       />
       <Aula
         image={fitDance}
