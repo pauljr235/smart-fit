@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const HeroImg = styled.div`
-  box-shadow: 20px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
   img {
-    width: 100%;
+    max-width: 95%;
     height: 100vh;
     border-radius: 16px;
   }

@@ -3,16 +3,15 @@ import { cores } from '../../styles'
 
 export const HeaderContainer = styled.div`
   display: flex;
-  max-width: 1024px;
   width: 100%;
-  margin: 0 auto;
-  padding: 20px 60px 10px;
+  padding: 20px 10px;
   align-items: center;
+  justify-content: space-between;
 `
 
 export const Logo = styled.div`
   img {
-    height: 70px;
+    height: 90px;
   }
 `
 
@@ -21,8 +20,9 @@ export const LinksD = styled.ul`
   list-style: none;
 `
 export const LinkD = styled.a`
-  margin-right: 16px;
+  margin-right: 32px;
   text-decoration: none;
   font-weight: bold;
   color: ${cores.black};
+  padding: 8px 16px;
 `
