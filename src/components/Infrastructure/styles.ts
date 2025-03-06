@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Lista = styled.ul`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 32px;
   list-style: none;
   gap: 50px;
