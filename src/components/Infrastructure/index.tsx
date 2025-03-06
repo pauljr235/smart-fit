@@ -4,7 +4,7 @@ import musculacao from '../../assets/images/areas-musculacao.webp'
 import { Area, Descricao, InfraContainer, Lista, TituloSecao } from './styles'
 
 const Infrastructure = () => (
-  <InfraContainer className="container">
+  <InfraContainer>
     <TituloSecao>
       Experiência <span>Smart Fit</span>{' '}
     </TituloSecao>
