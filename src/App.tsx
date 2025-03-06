@@ -5,6 +5,8 @@ import Header from './components/Header'
 import Infrastructure from './components/Infrastructure'
 
 import PlanosList from './components/PlanosList'
+import Serviços from './components/Serviços'
+
 import SmartApp from './components/SmartApp'
 import { GlobalCss } from './styles'
 
@@ -18,6 +20,7 @@ function App() {
       <Infrastructure />
       <AulasList />
       <SmartApp />
+      <Serviços />
       <Footer />
     </>
   )
