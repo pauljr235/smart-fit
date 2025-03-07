@@ -2,12 +2,8 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Lista = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 32px 0;
+  padding-bottom: 80px;
+  padding-top: 32px;
 `
 
 export const TituloSecao = styled.h2`
@@ -18,6 +14,10 @@ export const TituloSecao = styled.h2`
   color: #000;
 `
 
+export const SubtituloSecao = styled.p`
+  padding-bottom: 16px;
+`
+
 export const Card = styled.div`
   background: #fff;
   border-radius: 12px;
@@ -26,7 +26,8 @@ export const Card = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 400px;
+  width: auto;
 `
 
 export const CardImage = styled.img`

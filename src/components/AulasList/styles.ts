@@ -7,6 +7,7 @@ export const Lista = styled.ul`
   max-width: 850px;
   margin: 0 auto;
   padding-bottom: 32px;
+  justify-content: center;
 `
 export const TituloSecao = styled.h2`
   text-align: center;

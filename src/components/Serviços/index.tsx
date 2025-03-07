@@ -1,10 +1,14 @@
-import Aula from '../Aula'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import {
   Button,
   Card,
   CardContent,
   CardImage,
   Lista,
+  SubtituloSecao,
   TituloSecao
 } from './styles'
 
@@ -43,27 +47,46 @@ const servicos = [
   }
 ]
 
+const slideSettings = {
+  dots: true, // Adiciona os indicadores de página
+  infinite: true, //Faz o carrossel ser infinito
+  speed: 400, // Velocidade da transição
+  slidesToShow: 3, // Quantos slides aparecem no mobile
+  slidesToScroll: 1,
+  autoplay: true, // Carrossel automático
+  autoplaySpeed: 3000, // Tempo entre as transições
+  arrows: true // Cria Botões de navegação
+}
+
 const Serviços = () => (
-  <div>
+  <div className="container">
     <TituloSecao>
       Conheça nossos produtos e serviços adicionais para você
     </TituloSecao>
-    <p style={{ textAlign: 'center' }}>
+    <SubtituloSecao style={{ textAlign: 'center' }}>
       Só na Smart há serviços e produtos para potencializar seus resultados
-    </p>
-    <Lista className="container">
-      {servicos.map((servico, index) => (
-        <Card key={index}>
-          <CardImage src={servico.image} alt="" />
-          <CardContent>
-            <h3>{servico.title}</h3>
-            <p>{servico.subtitle}</p>
-            <strong>{servico.price}</strong>
-            <small>{servico.condition}</small>
-            <Button type="button">Saiba mais</Button>
-          </CardContent>
-        </Card>
-      ))}
+    </SubtituloSecao>
+    <Lista>
+      <Slider {...slideSettings}>
+        {servicos.map((servico, index) => (
+          <div key={index}>
+            {' '}
+            {/* Espaçamento lateral */}
+            <Card style={{ width: '80%' }}>
+              {' '}
+              {/* Centraliza e ajusta largura */}
+              <CardImage src={servico.image} alt="" />
+              <CardContent>
+                <h3>{servico.title}</h3>
+                <p>{servico.subtitle}</p>
+                <strong>{servico.price}</strong>
+                {servico.condition && <small>{servico.condition}</small>}
+                <Button type="button">Saiba mais</Button>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
+      </Slider>
     </Lista>
   </div>
 )
