@@ -25,8 +25,7 @@ const servicos = [
     image: front,
     title: 'Acompanhamento Personalizado de Treino',
     subtitle: 'Treino on-line personalizado criado por um treinador.',
-    price: 'R$ 39,90/mês',
-    condition: '12 meses de permanência'
+    price: 'R$ 39,90/mês'
   },
   {
     image: front2,
@@ -55,12 +54,34 @@ const slideSettings = {
   dots: true,
   infinite: true,
   speed: 400,
-  slidesToShow: 3,
+  slidesToShow: 3, // Exibe 3 cards por vez em telas maiores
   slidesToScroll: 1,
   autoplaySpeed: 3000,
-  arrows: false, //Removemos as setas padrão para usar as customizadas
-  centerMode: true, // 🔥 Centraliza os cards no carrossel
-  centerPadding: '0' // 🔥 Remove o padding central
+  arrows: false, // Removemos as setas padrão para usar as customizadas
+  centerMode: true, // Centraliza os cards no carrossel
+  centerPadding: '0', // Remove o padding central
+
+  // Responsividade para dispositivos móveis
+  responsive: [
+    {
+      breakpoint: 768, // Tela abaixo de 768px
+      settings: {
+        slidesToShow: 2, // Exibe 2 cards por vez em tablets
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '0'
+      }
+    },
+    {
+      breakpoint: 480, // Tela abaixo de 480px (dispositivos móveis)
+      settings: {
+        slidesToShow: 1, // Exibe 1 card por vez em dispositivos móveis
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '0'
+      }
+    }
+  ]
 }
 
 const Serviços = () => {
@@ -99,7 +120,6 @@ const Serviços = () => {
                   <h3>{servico.title}</h3>
                   <p>{servico.subtitle}</p>
                   <strong>{servico.price}</strong>
-                  {servico.condition && <small>{servico.condition}</small>}
                   <Button type="button">Saiba mais</Button>
                 </CardContent>
               </Card>

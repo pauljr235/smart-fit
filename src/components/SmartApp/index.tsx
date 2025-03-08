@@ -20,9 +20,7 @@ const SmartApp = () => (
       <br />
       <p>Baixe agora o Smart Fit App</p>
       <br />
-      <div>
-        <img src={qrCode} alt="QR CODE" />
-      </div>
+      <img src={qrCode} alt="QR CODE" />
     </AppInfo>
     <AppFoto>
       <img src={app} alt="foto app" />
