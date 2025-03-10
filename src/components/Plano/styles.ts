@@ -5,17 +5,17 @@ import { Props } from '.'
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column; /* Faz os elementos ficarem um abaixo do outro */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 50px 0;
+  width: 100%; /* Ocupa toda a largura */
 
-  // Responsividade para tablets e dispositivos móveis
   @media (max-width: 768px) {
     padding: 30px 0;
   }
 
-  // Responsividade para dispositivos móveis (iPhone)
   @media (max-width: 480px) {
     padding: 20px 0;
   }
@@ -26,23 +26,24 @@ export const Card = styled.div<Props>`
   color: ${(props) => (props.ativo ? '#fff' : '#000')};
   padding: 24px;
   border-radius: 16px;
-  max-width: 350px;
-  height: 652px;
+  width: 100%; /* Faz com que ocupe toda a largura disponível */
+  max-width: 100%; /* Garante que não fique menor do que a largura do container */
+  height: auto;
   text-align: left;
   line-height: 24px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+  display: block; /* Garante que fique em uma linha sozinho */
 
-  // Responsividade para tablets
-  @media (max-width: 768px) {
-    max-width: 100%;
+  @media (max-width: 1024px) {
     padding: 16px;
   }
 
-  // Responsividade para dispositivos móveis
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+
   @media (max-width: 480px) {
-    max-width: 100%;
-    height: auto;
     padding: 12px;
   }
 `

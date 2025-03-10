@@ -14,7 +14,17 @@ export const Lista = styled.ul`
   margin: 0 auto;
 
   // Responsividade para telas menores que 768px (tablets)
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 50px;
+    padding-left: 50px;
+    img {
+      width: 300px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     padding-right: 50px;
     padding-left: 50px;
