@@ -5,17 +5,17 @@ import { Props } from '.'
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column; /* Faz os elementos ficarem um abaixo do outro */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 50px 0;
-  width: 100%; /* Ocupa toda a largura */
 
+  // Responsividade para tablets e dispositivos móveis
   @media (max-width: 768px) {
     padding: 30px 0;
   }
 
+  // Responsividade para dispositivos móveis (iPhone)
   @media (max-width: 480px) {
     padding: 20px 0;
   }
@@ -26,25 +26,25 @@ export const Card = styled.div<Props>`
   color: ${(props) => (props.ativo ? '#fff' : '#000')};
   padding: 24px;
   border-radius: 16px;
-  width: 100%; /* Faz com que ocupe toda a largura disponível */
-  max-width: 100%; /* Garante que não fique menor do que a largura do container */
-  height: auto;
+  max-width: 350px;
+  height: 652px;
   text-align: left;
   line-height: 24px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  display: block; /* Garante que fique em uma linha sozinho */
 
-  @media (max-width: 1024px) {
-    padding: 16px;
-  }
-
+  // Responsividade para tablets
   @media (max-width: 768px) {
+    max-width: 100%;
     padding: 16px;
   }
 
+  // Responsividade para dispositivos móveis
   @media (max-width: 480px) {
-    padding: 12px;
+    max-width: 100%;
+    max-height: auto;
+    padding: 5px;
+    font-size: 8px;
   }
 `
 
@@ -74,7 +74,8 @@ export const Title = styled.h2`
 
   // Responsividade para dispositivos móveis
   @media (max-width: 480px) {
-    font-size: 20px;
+    font-size: 16px;
+    padding: 6px 0;
   }
 `
 
@@ -85,7 +86,7 @@ export const Description = styled.p`
 
   // Responsividade para dispositivos móveis
   @media (max-width: 480px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 `
 
@@ -106,8 +107,10 @@ export const Price = styled.div`
 
   // Responsividade para dispositivos móveis
   @media (max-width: 480px) {
+    font-size: 10px;
+    margin: 0;
     h3 {
-      font-size: 24px;
+      font-size: 16px;
     }
     span {
       font-size: 12px;
@@ -134,7 +137,7 @@ export const Button = styled.button`
 
   // Responsividade para dispositivos móveis
   @media (max-width: 480px) {
-    padding: 10px;
+    padding: 4px;
     font-size: 14px;
   }
 `
@@ -146,8 +149,8 @@ export const BenefitsList = styled.ul`
 
   // Responsividade para dispositivos móveis
   @media (max-width: 480px) {
-    margin-top: 12px;
-    padding-top: 12px;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   @media (max-width: 768px) {
